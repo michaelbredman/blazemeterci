@@ -1,0 +1,29 @@
+---
+provisioning: cloud
+modules:
+  cloud:
+    test: Jenkins CI Demo (Taurus)
+    address: https://a.blazemeter.com
+    token: pnxuexp4eTINyHsqPoE3
+
+execution:
+    - concurrency: 50
+      scenario: nano
+      hold-for: 3m
+      locations-weighted: true
+      locations:
+        us-east1-b: 1
+        us-east-1: 1
+        eu-west-1: 1
+
+scenarios:
+  nano:
+    requests:
+      - url: http://174.129.102.208/
+        label: home
+
+reporting:
+  - module: fail-criteria
+    criterias:
+      - avg-rt of home>400ms for 3000s, stop as failed
+      - fail of >10% for , stop as failed
