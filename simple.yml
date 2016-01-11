@@ -7,7 +7,7 @@ modules:
     token: pnxuexp4eTINyHsqPoE3
 
 execution:
-    - concurrency: 5
+    - concurrency: 50
       scenario: nano
       hold-for: 3m
       locations-weighted: true
@@ -19,10 +19,8 @@ execution:
 scenarios:
   nano:
     requests:
-      - url: http://ec2-54-196-177-226.compute-1.amazonaws.com:8080
-        label: home CI
-      - url: http://ec2-54-196-177-226.compute-1.amazonaws.com/privacy-orange.jsf
-        label: privacy CI
+      - url: http://174.129.102.208/
+        label: home
 
 reporting:
   - module: fail-criteria
