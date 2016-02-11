@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+- 2.1.3
+
+install:
+- sudo pip instsall bzt
+
+script:
+- bzt simple.yml
