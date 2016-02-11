@@ -6,5 +6,5 @@ install:
 - sudo pip install bzt
 
 script:
-- bzt simple.yml
+- bzt simple.yml -o modules.console.disable=true
 
