@@ -2,7 +2,7 @@
 provisioning: cloud
 modules:
   cloud:
-    test: Jenkins CI Demo (Taurus)
+    test: Travis CI Demo (Taurus)
     address: https://a.blazemeter.com
     token: pnxuexp4eTINyHsqPoE3
 
